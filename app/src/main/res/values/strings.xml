@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Test App</string>
+    <string name="button">OK</string>
+    <string name="def">Null</string>
+    <string name="match_rate">Match rate</string>
+    <string name="text_format">Undefind</string>
+    <string name="input_hint">Enter text</string>
+</resources>
