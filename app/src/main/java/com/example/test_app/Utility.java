@@ -11,8 +11,10 @@ public class Utility {
      */
     public static float matchRate(String src1, String src2) {
         int len1 = src1.length(), len2 = src2.length();
-        if (len1 == 0 || len2 == 0)
+        if (len1 == 0 && len2 == 0)
             return 1f;
+        if (len1==0 || len2==0)
+            return 0f;
 
         char[] a = src1.toCharArray(), b = src2.toCharArray();
         var dp = new int[len1 + 1][len2 + 1];

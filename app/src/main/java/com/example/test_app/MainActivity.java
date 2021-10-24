@@ -11,8 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView textView;
     private final EditText[] INPUTS = new EditText[2];
+    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +33,13 @@ public class MainActivity extends AppCompatActivity {
             texts[i] = INPUTS[i].getText().toString();
             sb.append(texts[i]).append("\n\n");
         }
+        if (texts[0].isEmpty() && texts[1].isEmpty()) {
+            textView.setText("");
+            return;
+        }
         sb.append(getString(R.string.match_rate)).append(pause);
-        float rate=Utility.matchRate(texts[0], texts[1])*100;
-        sb.append(String.format(Locale.getDefault(),"%.0f%%",rate));
+        float rate = Utility.matchRate(texts[0], texts[1]) * 100;
+        sb.append(String.format(Locale.getDefault(), "%.0f%%", rate));
         textView.setText(sb.toString());
     }
 }

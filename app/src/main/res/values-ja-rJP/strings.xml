@@ -2,8 +2,8 @@
 <resources>
     <string name="app_name">Test  App</string>
     <string name="def">Null</string>
-    <string name="input_hint">ここに何か入力してください</string>
-    <string name="button">OK</string>
+    <string name="input_hint">文字列を入力</string>
+    <string name="button">比較</string>
     <string name="text_format">未定義</string>
     <string name="match_rate">一致率</string>
 </resources>
